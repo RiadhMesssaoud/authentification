@@ -8,7 +8,8 @@ ConnectDB();
 app.use(express.json());
 //define Routes
 app.use("/register", require('./routes/register'));
-app.use(express.json())
+app.use("/login", require('./routes/login'));
+app.use("/post", require('./routes/post'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log('sever is running on PORT: ${PORT}'));
